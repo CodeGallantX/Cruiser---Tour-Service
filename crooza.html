@@ -2,6 +2,7 @@
 <html>
 <head>
   <title>Cruiser - Explore the World</title>
+  <link rel="shortcut icon" href="https://img-wixmp-fe53c9ff592a4da924211f23.wixmp.com/users/28d60b82-ee45-44ea-b940-a67cf391eae2/design-previews/8ecf470d-78a9-446d-9c39-dcbf533a172e/1718375565363-sample.jpeg?filename=Preview.png" type="image/x-icon">
   <link rel="stylesheet" type="text/css" href="styail.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Montserrat:wght@400;700&display=swap">
   <script src="script.js"></script>
@@ -11,20 +12,37 @@
 </head>
 <body>
   <header>
-    <div class="containex">
       <div class="logo">
         <img src="https://ik.imagekit.io/mshcgnjju/Preview__1_-removebg-preview.png?updatedAt=1718377590397" alt="">
       </div>
       <nav>
         <ul class="menu">
+          <li class="hideOnMobile"><a href="#home">Home</a></li>
+          <li class="hideOnMobile"><a href="#destinations">Destinations</a></li>
+          <li class="hideOnMobile"><a href="#tours">Tours</a></li>
+          <li class="hideOnMobile"><a href="#about">About</a></li>
+          <li class="hideOnMobile"><a href="#contact">Contact</a></li>
+          <li class="sidebarh" onclick="showSideBar()">
+            <a href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="#F2F2F2" height="26" viewBox="0 -960 960 960" width="26"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg>
+            </a>
+          </li>
+        </ul>
+
+        <ul class="sidebar">
+          <li onclick="hideSideBar()">
+            <a href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="#F2F2F2" height="26" viewBox="0 -960 960 960" width="26"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg>
+            </a>
+          </li>
           <li><a href="#home">Home</a></li>
           <li><a href="#destinations">Destinations</a></li>
           <li><a href="#tours">Tours</a></li>
           <li><a href="#about">About</a></li>
-          <li><a href="#contact">Contact</a></li>
+         <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
-    </div>
+  </header>
     <div class="hero">
       <div class="container">
         <h1>Welcome to Cruiser</h1>
@@ -32,74 +50,143 @@
         <a href="#destinations" class="btn">Explore Destinations</a>
       </div>
     </div>
-  </header>
+
+
+    <section id="destinations" class="gray-bg">
+      <div class="container">
+        <h2>Popular Destinations</h2>
+        <div class="card">
+          <img src="https://media.istockphoto.com/id/1185953092/photo/the-main-attraction-of-paris-and-all-of-europe-is-the-eiffel-tower-in-the-rays-of-the-setting.jpg?s=612x612&w=0&k=20&c=ZneUFVlR5TPCooxRV1rldUAadqLxZEvOoyVCOrtpcRQ=" alt="Eiffel Tower in Paris, France">
+          <div class="card-content">
+            <h3>Paris, France</h3>
+            <p>Experience the romantic charm of Paris with its iconic landmarks and vibrant culture.</p>
+            <a href="#" class="btn">Learn More</a>
+          </div>
+        </div>
+        
+        <div class="card">
+          <img src="https://media.istockphoto.com/id/1154761064/photo/the-palm-island-panorama-with-dubai-marina-in-the-background-aerial.jpg?s=612x612&w=0&k=20&c=CypnNYt7O98dz20Vogn4IOhJD79nTFBMRC8pH4Ddgd0=" alt="">
+          <div class="card-content">
+            <h3>Dubai, UAE</h3>
+            <p>Discover the futuristic marvels of Dubai, a city of luxury and innovation.</p>
+            <a href="#" class="btn">Learn More</a>
+          </div>
+        </div>
+
+      <div class="card">
+        <img src="https://media.istockphoto.com/id/509843968/photo/sydney-opera-house-aerial-view-from-harbour-bridge.jpg?s=612x612&w=0&k=20&c=rII_ju4CltNi0uCZTPYHHq2pfCRwPFZa8dBTFSnVjN8=" alt="Big Ben and Parliament in London, UK">
+        <div class="card-content">
+          <h3>Sydney, Australia</h3>
+          <p>Explore the historic and modern attractions of London, a city rich in history.</p>
+          <a href="#" class="btn">Learn More</a>
+        </div>
+      </div>
+    
+    </section>
+    
   
-  <section id="destinations">
-    <div class="container">
-      <h2>Popular Destinations</h2>
-      <div class="card">
-        <img src="https://media.istockphoto.com/id/1185953092/photo/the-main-attraction-of-paris-and-all-of-europe-is-the-eiffel-tower-in-the-rays-of-the-setting.jpg?s=612x612&w=0&k=20&c=ZneUFVlR5TPCooxRV1rldUAadqLxZEvOoyVCOrtpcRQ=" alt="Destination 1">
-        <div class="card-content">
-          <h3>Paris, France</h3>
-          <p>Description of destination 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-          <a href="#" class="btn">Learn More</a>
-        </div>
-      </div>
-      
-      <div class="card">
-        <img src="https://images.pexels.com/photos/2041556/pexels-photo-2041556.jpeg?auto=compress&cs=tinysrgb&w=600" alt="">
-        <div class="card-content">
-          <h3>Dubai, UAE</h3>
-          <p>Description of destination 2. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-          <a href="#" class="btn">Learn More</a>
-        </div>
-      </div>
-      
-      <div class="card">
-        <img src="destination3.jpg" alt="Destination 3">
-        <div class="card-content">
-          <h3>Destination 3</h3>
-          <p>Description of destination 3. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-          <a href="#" class="btn">Learn More</a>
-        </div>
-      </div>
-    </div>
-  </section>
+    <section id="tours" class="gray-bg">
+      <div class="container">
+          <h2>Featured Tours</h2>
+          <div class="tour-card">
+              <img src="https://media.istockphoto.com/id/1185953092/photo/the-main-attraction-of-paris-and-all-of-europe-is-the-eiffel-tower-in-the-rays-of-the-setting.jpg?s=612x612&w=0&k=20&c=ZneUFVlR5TPCooxRV1rldUAadqLxZEvOoyVCOrtpcRQ=" alt="Eiffel Tower in Paris, France">
+              <div class="tour-content">
+                  <h3>Paris Adventure</h3>
+                  <p>Duration: 7 days</p>
+                  <p>Price: $999</p>
+                  <a href="#" class="btn">Book Now</a>
+              </div>
+          </div>
   
-  <section id="tours" class="gray-bg">
-    <div class="container">
-      <h2>Featured Tours</h2>
-      <div class="tour-card">
-        <img src="tour1.jpg" alt="Tour 1">
-        <div class="tour-content">
-          <h3>Tour 1</h3>
-          <p>Duration: 7 days</p>
-          <p>Price: $999</p>
-          <a href="#" class="btn">Book Now</a>
-        </div>
+          <div class="tour-card">
+              <img src="https://media.istockphoto.com/id/1193239486/photo/daytime-shot-of-burj-al-arab-hotel.jpg?s=612x612&w=0&k=20&c=zZLqKNceHycS0WWpVnV_vFh1oAQNQcEq3qIm9viAj8E=" alt="Burj Al Arab, Dubai">
+              <div class="tour-content">
+                  <h3>Dubai Extravaganza</h3>
+                  <p>Duration: 5 days</p>
+                  <p>Price: $799</p>
+                  <a href="#" class="btn">Book Now</a>
+              </div>
+          </div>
+  
+          <div class="tour-card">
+              <img src="https://media.istockphoto.com/id/595729388/photo/shibuya-crossing-in-tokyo-japan.jpg?s=612x612&w=0&k=20&c=p2iLTXANPW3Jr8y7uki3Vo68VgCBVnIYzwLeEdmUL0I=" alt="Shibuya Crossing in Tokyo, Japan">
+              <div class="tour-content">
+                  <h3>Tokyo Experience</h3>
+                  <p>Duration: 10 days</p>
+                  <p>Price: $1499</p>
+                  <a href="#" class="btn">Book Now</a>
+              </div>
+          </div>
+  
+          <div class="more-tours">
+              <div class="tour-card">
+                  <img src="https://media.istockphoto.com/id/1442179368/photo/maldives-island.jpg?s=612x612&w=0&k=20&c=t38FJQ6YhyyZGN91A8tpn3nz9Aqcy_aXolImsOXOZ34=" alt="Maldives Beach Resort">
+                  <div class="tour-content">
+                      <h3>Luxury Beach Resort, Maldives</h3>
+                      <p>Duration: 7 days</p>
+                      <p>Price: $2999</p>
+                      <p>Enjoy a luxurious stay at a beach resort with crystal clear waters and pristine sands.</p>
+                      <a href="#" class="btn">Book Now</a>
+                  </div>
+              </div>
+  
+              <div class="tour-card">
+                  <img src="https://media.istockphoto.com/id/1140829787/photo/sunset-at-savannah-plains.jpg?s=612x612&w=0&k=20&c=z1e1kvLk52k10-2hT-mdnO_EAmT8BmnAm3qWP9vZ4UQ=" alt="Safari Adventure in Kenya">
+                  <div class="tour-content">
+                      <h3>Safari Adventure, Kenya</h3>
+                      <p>Duration: 10 days</p>
+                      <p>Price: $3999</p>
+                      <p>Experience the thrill of wildlife safaris and explore the stunning landscapes of Kenya.</p>
+                      <a href="#" class="btn">Book Now</a>
+                  </div>
+              </div>
+  
+              <div class="tour-card">
+                  <img src="https://media.istockphoto.com/id/1370346385/photo/amazing-mountain-ridge-view-from-the-mannlichen-station-grindelwald-switzerland.jpg?s=612x612&w=0&k=20&c=GUD6Lf3JeHR_u-2lxlyr665iig91ZsMJOqgAJR6WNn8=" alt="Swiss Alps Tour">
+                  <div class="tour-content">
+                      <h3>Swiss Alps, Switzerland</h3>
+                      <p>Duration: 5 days</p>
+                      <p>Price: $2499</p>
+                      <p>Discover the breathtaking beauty of the Swiss Alps with guided tours and mountain activities.</p>
+                      <a href="#" class="btn">Book Now</a>
+                  </div>
+              </div>
+  
+              <div class="tour-card">
+                  <img src="https://media.istockphoto.com/id/1471856897/photo/ulun-danu-beratan-temple-bali-indonesia.jpg?s=612x612&w=0&k=20&c=196Ue66vloowuDNBAJ2zMfN0bJq40oTtrae1xRkuLNU=" alt="Cultural Tour in Bali">
+                  <div class="tour-content">
+                      <h3>Cultural Tour, Bali</h3>
+                      <p>Duration: 8 days</p>
+                      <p>Price: $1999</p>
+                      <p>Immerse yourself in the rich culture of Bali with visits to temples, local villages, and beaches.</p>
+                      <a href="#" class="btn">Book Now</a>
+                  </div>
+              </div>
+  
+              <div class="tour-card">
+                  <img src="https://media.istockphoto.com/id/1320446784/photo/landscape-with-egyptian-pyramids-great-sphinx-and-silhouettes-ancient-symbols-and-landmarks.jpg?s=612x612&w=0&k=20&c=zmlew7rcseDM5vb2aKkaAETwVNdUmZID1k8KjGOa3yM=" alt="Ancient Egypt Exploration">
+                  <div class="tour-content">
+                      <h3>Ancient Egypt Exploration</h3>
+                      <p>Duration: 12 days</p>
+                      <p>Price: $3499</p>
+                      <p>Explore the wonders of ancient Egypt, including the Pyramids, Sphinx, and the Nile River.</p>
+                      <a href="#" class="btn">Book Now</a>
+                  </div>
+              </div>
+  
+              <div class="tour-card">
+                  <img src="https://media.istockphoto.com/id/1038382882/photo/the-city-machu-picchu-peru.jpg?s=612x612&w=0&k=20&c=3yIGGRAMORtreobMc1qAx_xEyBtyDB4MKQtuWiZ-4dI=" alt="Machu Picchu Trek">
+                  <div class="tour-content">
+                      <h3>Machu Picchu Trek, Peru</h3>
+                      <p>Duration: 7 days</p>
+                      <p>Price: $1799</p>
+                      <p>Embark on a trek to the historic site of Machu Picchu and experience the beauty of the Andes.</p>
+                      <a href="#" class="btn">Book Now</a>
+                  </div>
+              </div>
+          </div>
       </div>
-      
-      <div class="tour-card">
-        <img src="tour2.jpg" alt="Tour 2">
-        <div class="tour-content">
-          <h3>Tour 2</h3>
-          <p>Duration: 5 days</p>
-          <p>Price: $799</p>
-          <a href="#" class="btn">Book Now</a>
-        </div>
-      </div>
-      
-      <div class="tour-card">
-        <img src="tour3.jpg" alt="Tour 3">
-        <div class="tour-content">
-          <h3>Tour 3</h3>
-          <p>Duration: 10 days</p>
-          <p>Price: $1499</p>
-          <a href="#" class="btn">Book Now</a>
-        </div>
-      </div>
-    </div>
-  </section>
+  </section> 
   
   <section id="about">
     <div class="container">

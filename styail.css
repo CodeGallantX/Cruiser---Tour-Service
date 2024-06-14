@@ -1,5 +1,4 @@
 
-
 html {
   scroll-behavior: smooth;
 }
@@ -11,29 +10,24 @@ h1, h2, h3, h4 {
 body {
   font-family: 'Poppins', sans-serif;
   margin: 0;
-  padding: 0;
   box-sizing: border-box;
+  min-height: 100vh;
 }
 
 header {
-  position: relative;
-  width: 100%;
-  background: #333;
-  color: #fff;
-}
-
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-
-.containex {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  background: #003338;
+  color: #F2F2F2;
+  padding: 20px 100px;
+  height: 80px;
+}
+
+.logo {
+  margin-right: auto;
+  padding-left: 30px;
 }
 
 .logo img {
@@ -56,21 +50,33 @@ nav {
 .menu li a {
   color: #fff;
   text-decoration: none;
-  font-weight: 700;
+  font-weight: 600;
   transition: color 0.3s;
+  font-size: 1.1rem;
 }
 
 .menu li a:hover {
   color: #FC924B;
 }
 
+/* HOME */
+
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 50px;
+}
+
 .hero {
   background: url('hero.jpg') no-repeat center center/cover;
   height: 100vh;
+  background: #003338;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
+  margin-top: -60px;
 }
 
 .hero .container {
@@ -91,16 +97,18 @@ nav {
   background: #FC924B;
   color: #fff;
   padding: 10px 20px;
-  border: none;
+  border: 2px solid transparent;
   border-radius: 5px;
   text-decoration: none;
   font-weight: 700;
   transition: all 0.3s;
 }
 
-.btn:hover {
-  background: #d3824b;
+.btn:hover ~ form input[type="submit"] {
+  background: #003338;
+  border: 3px solid #FC924B;
 }
+
 
 section {
   padding: 60px 0;
@@ -115,6 +123,62 @@ h2 {
   margin-bottom: 40px;
   font-size: 36px;
 }
+
+/* General styling for the section */
+section#destinations {
+  background-color: #f9f9f9;
+  padding: 60px 0;
+}
+
+/* Styling for the destination cards */
+.card {
+  display: flex;
+  background: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.card img {
+  width: 30%;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.card-content h3 {
+  margin-top: 0;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.card-content p {
+  font-size: 1rem;
+  color: #666;
+}
+
+.card-content .btn {
+  align-self: flex-start;
+  background: #FC924B;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 700;
+  transition: all 0.3s;
+}
+
+.card-content .btn:hover {
+  background: #003338;
+}
+
 
 .card, .tour-card {
   display: flex;
@@ -138,16 +202,94 @@ h2 {
   margin-top: 0;
 }
 
+/* General styling for the section */
+section#tours {
+  background-color: #f9f9f9;
+  padding: 60px 0;
+}
+
+/* Styling for the tour cards */
+.tour-card {
+  display: flex;
+  background: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.tour-card img {
+  width: 30%;
+  object-fit: cover;
+}
+
+.tour-content {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.tour-content h3 {
+  margin-top: 0;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.tour-content p {
+  font-size: 1rem;
+  color: #666;
+}
+
+.tour-content .btn {
+  align-self: flex-start;
+  background: #FC924B;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 700;
+  transition: all 0.3s;
+}
+
+.tour-content .btn:hover {
+  background: #003338;
+}
+
+.more-tours {
+  display: none;
+}
+
+.see-more {
+  display: block;
+  margin: 20px auto;
+  background: #FC924B;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 700;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.see-more:hover {
+  background: #003338;
+}
+
+
+
 footer {
-  background: #333;
+  background: #003338;
   color: #fff;
   text-align: center;
-  padding: 20px 0;
+  padding: 10px 0 40px 0;
 }
 
 footer {
   list-style: none;
-  padding: 0;
   display: flex;
   justify-content: center;
   gap: 20px;
@@ -193,8 +335,59 @@ form input[type="submit"] {
   border-radius: 5px;
   font-size: 16px;
   cursor: pointer;
+  font-family: Poppins;
 }
 
 form input[type="submit"]:hover {
-  background: #d3824b;
+  background: #003338;
+}
+
+/* SIDEBAR */
+.sidebar {
+  position: fixed;
+  height: 100%;
+  top: 0;
+  right: -100rem;
+  z-index: 999;
+  background: #000000cd;
+  backdrop-filter: blur(10px);
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  transition: 0.6s ease-in-out;
+}
+
+.sidebarh {
+  display: none;
+}
+
+.sidebar li {
+  width: 100%;
+}
+
+.sidebar a {
+  width: 100%;
+} 
+
+@media (max-width: 800px) {
+  .hideOnMobile {
+      display: none;
+  }
+
+  .sidebarh {
+      display: block;
+  }
+
+  .sidebar {
+      width: 40%;
+}
+.logo p{
+  font-size: 20px;
+}
+}
+
+@media (max-width: 425px) {
+  .sidebar {
+      width: 100%;
+  }
 }
