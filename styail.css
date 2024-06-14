@@ -137,12 +137,16 @@ footer {
   padding: 20px 0;
 }
 
-footer .social-icons {
+footer {
   list-style: none;
   padding: 0;
   display: flex;
   justify-content: center;
   gap: 20px;
+}
+
+.social-icons {
+  
 }
 
 footer .social-icons li a i {
