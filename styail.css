@@ -143,18 +143,23 @@ footer {
   display: flex;
   justify-content: center;
   gap: 20px;
+  padding-bottom: 20px;
 }
 
 .social-icons {
-  
-}
-
-footer .social-icons li a i {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
   font-size: 20px;
 }
 
 i {
-  color: #ffffff;
+  color: #fff;
+}
+
+i:hover {
+  color: #FC924B;
 }
 
 form {
